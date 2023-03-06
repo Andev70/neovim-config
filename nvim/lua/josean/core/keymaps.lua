@@ -84,3 +84,21 @@ end
 -- Map Ctrl+s in insert mode to the save_file function
 vim.api.nvim_set_keymap('i', '<C-s>', '<cmd>lua save_file()<CR>', { noremap = true, silent = true })
 -- for emmet
+
+-- Copy selected text
+vim.api.nvim_set_keymap('v', '<C-c>', '"+y', { noremap = true })
+vim.api.nvim_set_keymap('i', '<C-c>', '<Esc>"+y', { noremap = true })
+vim.api.nvim_set_keymap('c', '<C-c>', '<C-c>"+y', { noremap = true })
+
+
+-- Map Ctrl+v to :put in insert, command, and visual mode
+vim.api.nvim_set_keymap('i', '<C-v>', '<Esc>:put +<CR>', { noremap = true })
+vim.api.nvim_set_keymap('c', '<C-v>', '<C-c>:put +<CR>', { noremap = true })
+vim.api.nvim_set_keymap('v', '<C-v>', ':put<CR>', { noremap = true })
+
+
+
+-- Map Ctrl-w to close the current buffer in Bufferline
+vim.api.nvim_set_keymap('i', '<C-b>', '<ESC>:bdelete<CR>', { noremap = true })
+
+vim.api.nvim_set_keymap('n', '<C-b>', ':bdelete<CR>', { noremap = true })
