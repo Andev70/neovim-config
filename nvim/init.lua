@@ -16,4 +16,4 @@ require("josean.plugins.treesitter")
 require("josean.plugins.gitsigns")
 require("josean.plugins.terminal")
 require("josean.plugins.buffer")
-
+require("josean.plugins.colorizer")
