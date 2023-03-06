@@ -94,6 +94,8 @@ return packer.startup(function(use)
 
   -- treesitter configuration
   use({
+    
+    "p00f/nvim-ts-rainbow",
     "nvim-treesitter/nvim-treesitter",
     run = function()
       local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
