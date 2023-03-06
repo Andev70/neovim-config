@@ -102,3 +102,19 @@ vim.api.nvim_set_keymap('v', '<C-v>', ':put<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<C-b>', '<ESC>:bdelete<CR>', { noremap = true })
 
 vim.api.nvim_set_keymap('n', '<C-b>', ':bdelete<CR>', { noremap = true })
+
+
+
+
+
+-- Undo changes in insert mode with Ctrl+Z
+vim.api.nvim_set_keymap('i', '<C-z>', '<C-o>u', { noremap = true, silent = true })
+
+
+-- Select all code in current buffer in insert mode
+vim.api.nvim_set_keymap('i', '<C-a>', '<Esc>ggVG', { noremap = true })
+
+-- Quit nvim without saving
+vim.api.nvim_set_keymap('n', '<C-q>', ':q!<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-q>', '<ESC>:q!<CR>', { noremap = true, silent = true })
+
