@@ -30,6 +30,8 @@ end
 return packer.startup(function(use)
   -- packer can manage itself
   use("wbthomason/packer.nvim")
+-- Add vim-http-client plugin
+use {'aquach/vim-http-client', requires = 'mattn/webapi-vim'}
 
   use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
