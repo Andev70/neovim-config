@@ -30,8 +30,8 @@ end
 return packer.startup(function(use)
   -- packer can manage itself
   use("wbthomason/packer.nvim")
--- Add vim-http-client plugin
-use {'aquach/vim-http-client', requires = 'mattn/webapi-vim'}
+  -- Add vim-http-client plugin
+  use({ "aquach/vim-http-client", requires = "mattn/webapi-vim" })
 
   use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
@@ -43,7 +43,7 @@ use {'aquach/vim-http-client', requires = 'mattn/webapi-vim'}
   use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
   use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
-  use 'norcalli/nvim-colorizer.lua'
+  use("norcalli/nvim-colorizer.lua")
 
   -- commenting with gc
   use("numToStr/Comment.nvim")
@@ -53,12 +53,15 @@ use {'aquach/vim-http-client', requires = 'mattn/webapi-vim'}
 
   -- vs-code like icons
   use("nvim-tree/nvim-web-devicons")
+  --one darkpro theme
+  -- Packer
+  use("olimorris/onedarkpro.nvim")
 
   -- statusline
   use("nvim-lualine/lualine.nvim")
 
   -- fuzzy finding w/ telescope
-  use{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" } -- dependency for better sorting performance
+  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
   use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
 
   -- autocompletion
@@ -74,8 +77,8 @@ use {'aquach/vim-http-client', requires = 'mattn/webapi-vim'}
   -- managing & installing lsp servers, linters & formatters
   use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
   use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
---toggleterm 
-  use {'akinsho/nvim-toggleterm.lua'}
+  --toggleterm
+  use({ "akinsho/nvim-toggleterm.lua" })
   -- configuring lsp servers
   use("neovim/nvim-lspconfig") -- easily configure language servers
   use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
@@ -96,7 +99,7 @@ use {'aquach/vim-http-client', requires = 'mattn/webapi-vim'}
 
   -- treesitter configuration
   use({
-    
+
     "p00f/nvim-ts-rainbow",
     "nvim-treesitter/nvim-treesitter",
     run = function()
@@ -108,22 +111,21 @@ use {'aquach/vim-http-client', requires = 'mattn/webapi-vim'}
   -- auto closing
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
--- prettire
+  -- prettire
   -- Install Prettier
-use {
-  "prettier/vim-prettier",
-  run = "npm install"
-}
-  -- buffer line 
+  use({
+    "prettier/vim-prettier",
+    run = "npm install",
+  })
+  -- buffer line
   -- Install bufferline
-use {
-  "akinsho/nvim-bufferline.lua",
-  requires = "kyazdani42/nvim-web-devicons",
-  config = function()
-    require("bufferline").setup{}
-  end
-}
-
+  use({
+    "akinsho/nvim-bufferline.lua",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("bufferline").setup({})
+    end,
+  })
 
   -- git integration
   use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side

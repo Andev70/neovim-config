@@ -13,6 +13,9 @@ vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 
 -- configure nvim-tree
 nvimtree.setup({
+  view={
+    width=30,
+  },
   -- change folder arrow icons
   renderer = {
     icons = {
@@ -25,6 +28,22 @@ nvimtree.setup({
       },
     },
   },
+renderer = {
+  highlight_git = true,
+
+  icons={
+    git_placement = "after",
+    glyphs={
+    git = {
+      unstaged = "M",
+      staged = "A",
+      untracked = "U",
+      renamed="R",
+      ignored="O",
+      deleted="D",
+    },},},
+  },
+
   -- disable window_picker for
   -- explorer to work well with
   -- window splits

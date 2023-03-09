@@ -40,10 +40,18 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 opt.iskeyword:append("-") -- consider string-string as whole word
 -- Automatically format code with Prettier on save
-vim.api.nvim_exec([[
+vim.api.nvim_exec(
+  [[
   autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.json,*.md,*.html,*.css,*.yaml,*.yml PrettierAsync
-]], false)
+]],
+  false
+)
 
 -- word wrap
 vim.wo.wrap = true
-
+-- Customize Git status indicators in nvim-tree
+vim.g.nvim_tree_git_hl = 1
+vim.g.nvim_tree_git_hl_modified = "M"
+vim.g.nvim_tree_git_hl_add = "A"
+vim.g.nvim_tree_git_hl_delete = "D"
+vim.g.nvim_tree_git_hl_rename = "R"

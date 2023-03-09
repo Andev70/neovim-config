@@ -1,24 +1,25 @@
 --- Configure font for icons
-vim.g.webdevicons_enable = true
-vim.g.webdevicons_enable_nerdtree = true
-vim.g.webdevicons_enable_vimfiler = true
-vim.g.webdevicons_enable_vista = true
-vim.g.webdevicons_enable_ctrlp = true
-vim.g.webdevicons_enable_unite = true
-vim.g.webdevicons_enable_flagship_statusline = true
-vim.g.airline_extensions_tabline_enabled = 1
-vim.g.airline_powerline_fonts = 1
-vim.g.airline_symbols = {
-  branch = '',
-  line = '',
-  readonly = '',
-  modified = '',
-  separator = '',
-  space = ' ',
-}
+--vim.g.webdevicons_enable = true
+--vim.g.webdevicons_enable_nerdtree = true
+-- vim.g.webdevicons_enable_vimfiler = true
+-- vim.g.webdevicons_enable_vista = true
+-- vim.g.webdevicons_enable_ctrlp = true
+-- vim.g.webdevicons_enable_unite = true
+-- vim.g.webdevicons_enable_flagship_statusline = true
+--vim.g.airline_extensions_tabline_enabled = 1
+-- vim.g.airline_powerline_fonts = 1
+--vim.g.airline_symbols = {
+-- branch = "",
+-- line = "",
+-- readonly = "",
+-- modified = "",
+-- separator = "",
+-- space = " ",
+-- }
+
 --set leader key to space
 vim.g.mapleader = " "
-vim.g.python3_host_prog = '/data/data/com.termux/files/usr/bin/python3'
+vim.g.python3_host_prog = "/data/data/com.termux/files/usr/bin/python3"
 
 local keymap = vim.keymap -- for conciseness
 
@@ -58,9 +59,9 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
 
 -- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") 
+keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
-keymap.set("i", "<leader>e", "<ESC>:NvimTreeToggle<CR>") 
+keymap.set("i", "<leader>e", "<ESC>:NvimTreeToggle<CR>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -80,43 +81,34 @@ keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if ne
 
 -- Define a function to save the file
 function save_file()
-  vim.api.nvim_command('w')
+  vim.api.nvim_command("w")
 end
 
 -- Map Ctrl+s in insert mode to the save_file function
-vim.api.nvim_set_keymap('i', '<C-s>', '<cmd>lua save_file()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<C-s>", "<cmd>lua save_file()<CR>", { noremap = true, silent = true })
 -- for emmet
 
 -- Copy selected text
-vim.api.nvim_set_keymap('v', '<C-c>', '"+y', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-c>', '<Esc>"+y', { noremap = true })
-vim.api.nvim_set_keymap('c', '<C-c>', '<C-c>"+y', { noremap = true })
-
+vim.api.nvim_set_keymap("v", "<C-c>", '"+y', { noremap = true })
+vim.api.nvim_set_keymap("i", "<C-c>", '<Esc>"+y', { noremap = true })
+vim.api.nvim_set_keymap("c", "<C-c>", '<C-c>"+y', { noremap = true })
 
 -- Map Ctrl+v to :put in insert, command, and visual mode
-vim.api.nvim_set_keymap('i', '<C-v>', '<Esc>:put +<CR>', { noremap = true })
-vim.api.nvim_set_keymap('c', '<C-v>', '<C-c>:put +<CR>', { noremap = true })
-vim.api.nvim_set_keymap('v', '<C-v>', ':put<CR>', { noremap = true })
-
-
+vim.api.nvim_set_keymap("i", "<C-v>", "<Esc>:put +<CR>", { noremap = true })
+vim.api.nvim_set_keymap("c", "<C-v>", "<C-c>:put +<CR>", { noremap = true })
+vim.api.nvim_set_keymap("v", "<C-v>", ":put<CR>", { noremap = true })
 
 -- Map Ctrl-w to close the current buffer in Bufferline
-vim.api.nvim_set_keymap('i', '<C-b>', '<ESC>:bdelete<CR>', { noremap = true })
+vim.api.nvim_set_keymap("i", "<C-b>", "<ESC>:bdelete<CR>", { noremap = true })
 
-vim.api.nvim_set_keymap('n', '<C-b>', ':bdelete<CR>', { noremap = true })
-
-
-
-
+vim.api.nvim_set_keymap("n", "<C-b>", ":bdelete<CR>", { noremap = true })
 
 -- Undo changes in insert mode with Ctrl+Z
-vim.api.nvim_set_keymap('i', '<C-z>', '<C-o>u', { noremap = true, silent = true })
-
+vim.api.nvim_set_keymap("i", "<C-z>", "<C-o>u", { noremap = true, silent = true })
 
 -- Select all code in current buffer in insert mode
-vim.api.nvim_set_keymap('i', '<C-a>', '<Esc>ggVG', { noremap = true })
+vim.api.nvim_set_keymap("i", "<C-a>", "<Esc>ggVG", { noremap = true })
 
 -- Quit nvim without saving
-vim.api.nvim_set_keymap('n', '<C-q>', ':q!<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '<C-q>', '<ESC>:q!<CR>', { noremap = true, silent = true })
-
+vim.api.nvim_set_keymap("n", "<C-q>", ":q!<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<C-q>", "<ESC>:q!<CR>", { noremap = true, silent = true })
