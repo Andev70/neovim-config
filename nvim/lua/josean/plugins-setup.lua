@@ -53,9 +53,7 @@ return packer.startup(function(use)
 
   -- vs-code like icons
   use("nvim-tree/nvim-web-devicons")
-  --one darkpro theme
-  -- Packer
-  use("olimorris/onedarkpro.nvim")
+  use({ "shatur/neovim-ayu" })
 
   -- statusline
   use("nvim-lualine/lualine.nvim")
