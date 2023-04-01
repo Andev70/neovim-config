@@ -53,8 +53,7 @@ return packer.startup(function(use)
 
   -- vs-code like icons
   use("nvim-tree/nvim-web-devicons")
-  use({ "shatur/neovim-ayu" })
-
+  use("folke/tokyonight.nvim")
   -- statusline
   use("nvim-lualine/lualine.nvim")
 
