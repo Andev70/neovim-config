@@ -9,11 +9,15 @@ treesitter.setup({
   -- enable syntax highlighting
   highlight = {
     enable = true,
+    disable = { "yaml" },
+    additional_vim_regex_highlighting = true,
   },
   -- enable indentation
   indent = { enable = true },
-  -- enable autotagging (w/ nvim-ts-autotag plugin)
-  autotag = { enable = true },
+  autotag = {
+    enable = true,
+    filetypes = { "html", "xml", "jsx", "tsx", "svelte", "vue" },
+  },
   -- ensure these language parsers are installed
   ensure_installed = {
     "json",
@@ -44,7 +48,7 @@ treesitter.setup({
     max_file_lines = 1000,
 
     colors = {
-      "#16a34a  ", -- red
+      "#3f362f", -- red
       "#0284c7", -- orange
       "#BFDB38", -- yellow
       "#FFC93C", -- green
@@ -105,3 +109,7 @@ treesitter.setup({
   -- refer to :h nvim-treesitter-textobjects
   -- for more options
 })
+
+-- Define the colors for the brackets and matching pairs
+vim.cmd("highlight MatchParenCur guifg=#FF00FF guibg=none")
+vim.cmd("highlight MatchParen guifg=none guibg=#44475a")

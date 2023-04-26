@@ -30,8 +30,7 @@ end
 return packer.startup(function(use)
   -- packer can manage itself
   use("wbthomason/packer.nvim")
-  -- Add vim-http-client plugin
-  use({ "aquach/vim-http-client", requires = "mattn/webapi-vim" })
+  -- tabnine
 
   use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
@@ -39,6 +38,8 @@ return packer.startup(function(use)
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
   use("szw/vim-maximizer") -- maximizes and restores current window
+  -- other plugins...
+  -- autoclosing tag or rename tag
 
   -- react anippet engine
   use({
@@ -116,7 +117,7 @@ return packer.startup(function(use)
 
   -- auto closing
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
-  use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
+
   -- prettire
   -- Install Prettier
   use({

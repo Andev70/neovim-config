@@ -3,6 +3,7 @@
 		"typescript": true,
 		"eslint": true,
 		"srcDir": true,
-		"importAlias": "@/*"
+		"importAlias": "@/*",
+		"tailwind": true
 	}
 }

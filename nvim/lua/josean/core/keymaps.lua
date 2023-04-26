@@ -20,6 +20,7 @@
 --set leader key to space
 vim.g.mapleader = " "
 vim.g.python3_host_prog = "/data/data/com.termux/files/usr/bin/python3"
+-- Configure vim-dotenv
 
 local keymap = vim.keymap -- for conciseness
 
@@ -111,3 +112,9 @@ vim.api.nvim_set_keymap("i", "<C-a>", "<Esc>ggVG", { noremap = true })
 -- Quit nvim without saving
 vim.api.nvim_set_keymap("n", "<C-q>", ":q!<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<C-q>", "<ESC>:q!<CR>", { noremap = true, silent = true })
+
+-- Map Ctrl + Left Arrow to BufferLineCycleNext
+vim.api.nvim_set_keymap("n", "<C-Right>", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
+
+-- Map Ctrl + Left Arrow to BufferLineCycleNext
+vim.api.nvim_set_keymap("i", "<C-Right>", "<Esc>:BufferLineCycleNext<CR>a", { noremap = true, silent = true })
