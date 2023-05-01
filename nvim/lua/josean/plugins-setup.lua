@@ -31,10 +31,10 @@ return packer.startup(function(use)
   -- packer can manage itself
   use("wbthomason/packer.nvim")
   -- tabnine
-
+  use("woosaaahh/sj.nvim")
   use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-  use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+  -- preferred colorscheme
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
   use("szw/vim-maximizer") -- maximizes and restores current window
@@ -114,7 +114,6 @@ return packer.startup(function(use)
       ts_update()
     end,
   })
-
   -- auto closing
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 
