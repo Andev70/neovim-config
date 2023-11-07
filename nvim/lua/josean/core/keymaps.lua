@@ -81,7 +81,7 @@ keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if ne
 
 -- Define a function to save the file
 function save_file()
-  vim.api.nvim_command("w")
+  vim.api.nvim_command("w!")
 end
 
 -- Map Ctrl+s in insert mode to the save_file function

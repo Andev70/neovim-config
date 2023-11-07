@@ -5,7 +5,7 @@ require("josean.core.colorscheme")
 require("josean.plugins.comment")
 require("josean.plugins.nvim-tree")
 require("josean.plugins.lualine")
-require("josean.plugins.telescope")
+
 require("josean.plugins.nvim-cmp")
 require("josean.plugins.lsp.mason")
 require("josean.plugins.lsp.lspsaga")
