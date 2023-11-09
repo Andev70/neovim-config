@@ -22,6 +22,8 @@ vim.g.mapleader = " "
 vim.g.python3_host_prog = "/data/data/com.termux/files/usr/bin/python3"
 -- Configure vim-dotenv
 
+
+
 local keymap = vim.keymap -- for conciseness
 
 ---------------------
