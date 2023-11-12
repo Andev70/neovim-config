@@ -49,7 +49,9 @@ return packer.startup(function(use)
     "epilande/vim-react-snippets",
     ft = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
   })
-
+use(
+    { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 }
+  )
   -- essential plugins
   use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
   use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
