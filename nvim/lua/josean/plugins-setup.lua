@@ -39,6 +39,7 @@ return packer.startup(function(use)
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
   use("szw/vim-maximizer") -- maximizes and restores current window
+
   -- other plugins...
   -- autoclosing tag or rename tag
 

@@ -1,22 +1,3 @@
---- Configure font for icons
---vim.g.webdevicons_enable = true
---vim.g.webdevicons_enable_nerdtree = true
--- vim.g.webdevicons_enable_vimfiler = true
--- vim.g.webdevicons_enable_vista = true
--- vim.g.webdevicons_enable_ctrlp = true
--- vim.g.webdevicons_enable_unite = true
--- vim.g.webdevicons_enable_flagship_statusline = true
---vim.g.airline_extensions_tabline_enabled = 1
--- vim.g.airline_powerline_fonts = 1
---vim.g.airline_symbols = {
--- branch = "",
--- line = "",
--- readonly = "",
--- modified = "",
--- separator = "",
--- space = " ",
--- }
-
 --set leader key to space
 vim.g.mapleader = " "
 vim.g.python3_host_prog = "/data/data/com.termux/files/usr/bin/python3"
